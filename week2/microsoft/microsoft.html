@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Microsoft homepage</title>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            min-width: 320px;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            box-sizing: inherit;
+        }
+
+        ol, ul {
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, ol, p, ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        button, input, optgroup, select, textarea {
+            color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+
+        .head_cont {
+            height: 54px;
+            margin-bottom: 10px;
+            z-index: 502;
+            display: flex;
+            justify-content: center;
+        }
+
+        .head_cont_center {
+            max-width: 1600px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+            left: 100px;
+            width: 1600px
+        }
+
+        a:link, a:focus, a:hover, a:active, a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .c-logo {
+            padding: 16px 6px 16px 10px;
+            float: left;
+            height: 100%;
+            margin-top: 1px;
+            width: 137px;
+        }
+
+        .c-image {
+            margin-top: -3px;
+            max-width: none;
+            width: 108px;
+            display: block;
+        }
+
+        #uh_nav {
+            padding-left: 2px;
+            padding-right: 1px;
+            flex: 1 1 auto;
+            width: 877px;
+            height: 54px;
+        }
+
+        .uh_nav_items {
+            padding: 0;
+            list-style: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .single-item {
+            display: inline-block;
+        }
+
+        .single_link {
+            border: 1px solid transparent;
+            display: inline-block;
+            margin-top: 1px;
+            padding: 16px 8px 10px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .c-uh-actions {
+            display: flex;
+        }
+
+        #uh_nav {
+            flex: 1 1 auto;
+            margin-right: 15px;
+            padding-left: 2px;
+            padding-right: 1px;
+
+        }
+
+        .uh_nav_items {
+            width: 877px;
+            height: 54px;
+        }
+
+        .menu_items {
+            display: inline-block;
+        }
+
+        .menu_items li {
+            list-style-type: none;
+        }
+
+        .all-ms-nav {
+            margin-right: 0px;
+            margin-top: 1px;
+            border: 1px solid transparent;
+            padding: 16px 24px 16px 12px;
+            background: transparent;
+            position: relative;
+            right: 9px;
+        }
+        h1{
+            font-family: "HelveticaNowDisplay Black", sans-serif;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 35px;
+        }
+        p{
+            font-family: "HelveticaNowDisplay Black", sans-serif;
+            text-decoration: none;
+            width: 520px;
+            line-height: 22px;
+        }
+
+        .about-ms-365{
+            text-decoration: none;
+            color: #262626;
+        }
+
+        .for-one{
+            font-family: "HelveticaNowDisplay Black", sans-serif;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .for-one:hover{
+            text-decoration: underline;
+        }
+
+        .for-six{
+            font-family: "HelveticaNowDisplay Black", sans-serif;
+            text-decoration: none;
+            font-weight: 550;
+            font-size: 15px;
+        }
+
+        .for-six:hover{
+            text-decoration: underline;
+        }
+
+        .second-line-txt{
+            font-family: "HelveticaNowDisplay Black", sans-serif;
+            text-decoration: none;
+        }
+
+        .bottom-line{
+            margin-right: 25px;
+        }
+
+        .extra-link{
+            text-decoration: none;
+        }
+
+        .extra-link:hover{
+            text-decoration: underline;
+        }
+        .c-uhf-menu::after {
+            font-family: "MWF-MDL2";
+            content: "";
+            position: absolute;
+            font-size: 8px;
+            font-weight: 700;
+            padding-top: 7px;
+            color: #262626;
+        }
+
+        .c-search {
+            max-width: 296px;
+            margin-top: 3px;
+            min-width: 90px;
+            width: auto;
+        }
+
+        #search_btn {
+            border: none;
+            position: relative;
+            height: 34px;
+            margin: 0px 2px 1px 1px;
+            padding: 13px 9px 9px 9px;
+            background-color: white;
+        }
+
+        #search_btn::after {
+            font-family: "MWF-MDL2";
+            content: "";
+            border: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 2px;
+            position: relative;
+            text-indent: 0;
+            vertical-align: sub;
+        }
+
+        #uh-shopping-cart {
+            border: 1px solid transparent;
+            color: #262626;
+            display: inline-block;
+            margin-top: 1px;
+            height: 48px;
+            margin-left: 18px;
+        }
+
+        .glyph-shopping-cart:after {
+            font-family: "MWF-MDL2";
+            content: "";
+            display: inline-block;
+            float: left;
+            font-size: 16px;
+            line-height: 42px;
+            margin-top: 2px;
+        }
+
+        .c-cart {
+            line-height: 46px;
+            vertical-align: top;
+            padding-right: 6px;
+            float: left;
+        }
+
+        #meControl {
+            padding-top: 3px;
+        }
+
+        .mectrl_header {
+            display: flex;
+        }
+
+        .mectrl_headertext {
+            line-height: 48px;
+            font-size: 13px;
+            padding-left: 12px;
+            padding-right: 4px;
+        }
+
+        #mectrl_headerPicture {
+            width: 32px;
+            height: 32px;
+            margin: 8px;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='%23707070'%3E%3Cg class='mectrl_stroke' stroke-width='1.9' fill='none'%3E%3Ccircle cx='32' cy='32' r='30.25'/%3E%3Cg transform='matrix(1.1 0 0 1.1 8.8 5.61)'%3E%3Ccircle class='mectrl_stroke' cx='20' cy='16' r='7'/%3E%3Cpath class='mectrl_stroke' d='M30 35h10m-5-5v10M30.833 32.09A11 11 0 009 34'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+
+<div role="presentation" id="headerArea">
+    <div id="headerRegion">
+        <div id="universalHeader">
+            <header class="header" style="top: 0px;">
+                <div class="head_cont">
+                    <div class="head_cont_center">
+                        <a id="mLogo" class="c-logo">
+                            <img class="c-image"
+                                 src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                            >
+                        </a>
+                        <nav id="uh_nav" class="m_nav">
+                            <ul class="uh_nav_items">
+                                <li class="single-item">
+                                    <a id="shellmenu_0" class="single_link"
+                                       href="https://www.microsoft.com/microsoft-365">Microsoft 365</a>
+                                </li>
+                                <li class="single-item">
+                                    <a id="shellmenu_1" class="single_link"
+                                       href="https://www.microsoft.com/microsoft-365/microsoft-office">Office</a>
+                                </li>
+                                <li class="single-item">
+                                    <a id="shellmenu_2" class="single_link"
+                                       href="https://www.microsoft.com/ru-ru/windows/">Windows</a>
+                                </li>
+                                <li class="single-item">
+                                    <a id="l1_support" class="single_link" href="https://support.microsoft.com/ru-ru">Поддержка</a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                        <div class="c-uh-actions">
+                            <div class="w-menu">
+                                <nav id="uh-navi">
+                                    <ul class="menu_items">
+                                        <li>
+                                            <div class="c-uhf-menu js-nav-menu">
+                                                <button type="button" class="all-ms-nav">
+                                                    <span>Все продукты Microsoft</span><span id="under"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search"
+                                  action="https://www.microsoft.com/ru-by/search" method="GET">
+                                <button id="search_btn" aria-label="Поиск на Microsoft.com" class="c-glyph"
+                                        data-bi-dnt="true" data-bi-mto="true" aria-expanded="false">
+                                    <span role="presentation">Поиск</span>
+                                </button>
+                            </form>
+
+                            <a id="uh-shopping-cart" aria-label="0 товары в корзине"
+                               class="c-action-trigger c-glyph c-uhf-nav-link glyph-shopping-cart"
+                               href="https://www.microsoft.com/ru-by/store/buy">
+                                <span class="c-cart">Корзина</span>
+                            </a>
+
+                            <div id="meControl" class="c-me">
+                                <div class="mectrl_root"><a id="mectrl_main_trigger"
+                                                            class="mectrl_resetStyle mectrl_trigger"
+                                                            href="https://www.microsoft.com/mscomhp/onerf/signin?EEL=True&amp;pcexp=True&amp;ru=https%3A%2F%2Fwww.microsoft.com%2Fru-by"
+                                                            target="_top">
+                                    <div class="mectrl_header" aria-hidden="true" role="presentation">
+                                        <div class="mectrl_headertext">Войти</div>
+                                        <div id="mectrl_headerPicture"
+                                             class="mectrl_profilepic mectrl_glyph glyph_signIn_circle"
+                                             aria-hidden="true" role="presentation"></div>
+                                    </div>
+                                </a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+</div>
+
+<a style="text-decoration: none" href="https://www.microsoft.com/ru-kz/microsoft-365/p/microsoft-365-family/cfq7ttc0k5dm?icid=mscom_marcom_H1a_M365Family">
+    <div class="about-ms-365">
+        <img style="margin:0 150px" src="microsoft-main.png" alt="about MS 365">
+        <h1 class="ms365" style="margin: -395px 0 0 240px; text-decoration: none">Microsoft 365</h1>
+        <p class="about-ms-365" style="margin-left: 240px">Приложения Office премиум, дополнительное облачное хранилище, продвинутые инструменты обеспечения безопасности — все в одной удобной подписке</p>
+        <div>
+            <button  style="background-color:black; color: white; border: none;
+                        width: 156px; height:39.5px; margin-left: 240px" type="button"><span class="for-six">До 6 человек</span></button>
+
+            <button style="background-color:inherit; border: none;
+                        width: 156px; height:39.5px; margin-left: 10px" type="button"><span class="for-one">Для 1 человека</span></button>
+        </div>
+    </div>
+</a>
+
+
+<div style="margin: 255px 0 0 149px; display: flex">
+    <a class="bottom-line" style="text-decoration: none" href="https://www.microsoft.com/ru-ru/microsoft-365/microsoft-teams/group-chat-software?icid=mscom_marcom_CPH1a_Teams" target="_blank">
+        <div>
+            <img src="bottom1.png" alt="msTeams">
+            <h3 class="second-line-txt" style="color: black">Microsoft Teams</h3>
+            <p class="second-line-txt" style="color: black; width: 370px">Общайтесь, проводите собрания, звоните и сотрудничайте.</p>
+            <button class="extra-link" style="border: none; background-color: inherit; color: #0067B8; font-size: 15px" type="button">Подробнее</button>
+        </div>
+    </a >
+    <a class="bottom-line" style="text-decoration: none" href="https://www.microsoft.com/ru-ru/edge?form=MI13F3&OCID=MI13F3" target="_blank">
+        <div>
+            <img src="bottom2.png" alt="msEdge">
+            <h3 class="second-line-txt" style="color: black">Microsoft Edge</h3>
+            <p class="second-line-txt" style="color: black; width: 370px">Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p>
+            <button class="extra-link" style="border: none; background-color: inherit; color: #0067B8; font-size: 15px" type="button">Скачать</button>
+        </div>
+    </a>
+    <a class="bottom-line" style="text-decoration: none" href="https://www.microsoft.com/ru-ru/microsoft-365/onedrive/online-cloud-storage?icid=mscom_marcom_CPH3a_OneDrive" target="_blank">
+        <div>
+            <img src="bottom3.png" alt="msOneDrive">
+            <h3 class="second-line-txt" style="color: black">Microsoft OneDrive</h3>
+            <p class="second-line-txt" style="color: black; width: 370px">Сохраняйте свои файлы и фотографии на OneDrive — они будут доступны с любого устройства и где угодно.</p>
+            <button class="extra-link" style="border: none; background-color: inherit; color: #0067B8; font-size: 15px" type="button">Подробнее</button>
+        </div>
+    </a>
+    <a class="bottom-line" style="text-decoration: none" href="https://www.microsoft.com/ru-ru/windows/features?icid=mscom_marcom_CPH4a_Windows10" target="_blank">
+        <div>
+            <img src="bottom4.png" alt="WindowsUpdate">
+            <h3 class="second-line-txt" style="color: black">Обновление Windows 10</h3>
+            <p class="second-line-txt" style="color: black; width: 370px">Предоставляя новые функции, которые помогут вам успевать больше, общаться чаще и экономить время.</p>
+            <button class="extra-link" style="border: none; background-color: inherit; color: #0067B8; font-size: 15px" type="button">Узнать больше</button>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>
