@@ -1,0 +1,42 @@
+<h3>Categories</h3>
+<div class="row">
+  <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='smartphones'">Smartphones</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='laptops'">Laptops </button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='smartwatches'">Smartwatches</button>
+  <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='shoes'">Shoes</button>
+
+  <ul id="productsList">
+    <li *ngFor="let product of(visibleProducts|productFilter: filterBy)">
+      <h3>
+        <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+          {{ product.name }}
+        </a>
+      </h3>
+      <p>
+        Description: {{ product.description }}
+      </p>
+      <a href={{product.link}} target="_blank"><img src={{product.image}} class="size"></a>
+      <p class='click'>Click img to open the real item</p>
+      <p>Rating: {{product.rating}} <p>
+      <input type="button" class="button" (click)="onClick(product)" />
+
+      <span id="like-count">{{ product.likesCount }}</span>
+      <a [href]="'https://telegram.me/share/url?url=' + product.link " target="_blank">
+        <button>
+          Share
+        </button>
+      </a>
+      <button (click)="removeFromList(product)">Remove</button>
+
+      <div id="content">
+        <img class="gallery_img" src={{product.img1}}>
+        <img class="gallery_img" src={{product.img2}}>
+        <img class="gallery_img" src={{product.img3}}>
+        <img class="gallery_img" src={{product.img4}}>
+        <img class="gallery_img" src={{product.img5}}>
+      </div>
+
+    </li>
+  </ul>
+</div>
